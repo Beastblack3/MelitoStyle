@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#faf8f3">
+    <meta name="description" content="Descubre los productos de cuidado personal y estilo de Melito Style.">
+
+    <title>Productos | Melito Style</title>
+
+    <link rel="stylesheet" href="../../css/fonts.css">
+    <link rel="stylesheet" href="../../css/styles_catalogo.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="../../js/catalogo.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="nav container" aria-label="Navegación principal">
+
+            <a href="../../index.html" class="logo" aria-label="Melito Style, inicio">
+                <img src="../../img/icono/logotipo_dorado.png"
+                     alt="Melito Style">
+            </a>
+
+            <button class="menu-toggle"
+                    type="button"
+                    aria-label="Abrir menú"
+                    aria-expanded="false"
+                    aria-controls="nav-menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+
+                <a class="nav-link" href="../../index.html">Inicio</a>
+
+                <a class="nav-link" href="../../index.html#servicios">
+                    Servicios
+                </a>
+
+                <a class="nav-link active"
+                   href="./productos.html"
+                   aria-current="page">
+                    Productos
+                </a>
+
+                <a class="nav-link" href="../sobre-nosotros.html">
+                    Sobre nosotros
+                </a>
+
+                <a class="nav-link admin-link" href="../../admin.html">
+                    <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                    Panel admin
+                </a>
+
+                <a class="nav-appointment"
+                   href="https://wa.me/573234838051"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                    Contactar
+                </a>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Presentación del catálogo -->
+        <section class="hero">
+            <div class="hero-content container">
+
+                <div class="hero-info">
+                    <span class="eyebrow">ESTILO · CUIDADO · ACTITUD</span>
+
+                    <h1>
+                        Cuida tu estilo,
+                        <span>todos los días.</span>
+                    </h1>
+
+                    <p>
+                        Encuentra productos para el cuidado personal,
+                        el cabello y tu estilo. Calidad y personalidad
+                        en cada detalle.
+                    </p>
+
+                    <a href="#catalogo" class="button-gold">
+                        Explorar catálogo
+                        <i class="fa-solid fa-arrow-right"
+                           aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="hero-decoration" aria-hidden="true">
+                    <i class="fa-solid fa-crown"></i>
+                    <span>MELITO STYLE</span>
+                    <p>Tu estilo, tu esencia.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Catálogo -->
+        <section class="catalog container" id="catalogo">
+
+            <div class="section-heading">
+                <span class="eyebrow">NUESTRA SELECCIÓN</span>
+                <h2>Encuentra tu próximo favorito</h2>
+                <p>
+                    Explora nuestros productos y encuentra el que mejor
+                    se adapta a ti.
+                </p>
+            </div>
+
+            <div class="catalog-tools">
+
+                <label class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"
+                       aria-hidden="true"></i>
+
+                    <input type="search"
+                           id="search-product"
+                           placeholder="Buscar productos..."
+                           aria-label="Buscar productos por nombre">
+                </label>
+
+                <div class="category-filters"
+                     id="category-filters"
+                     aria-label="Filtrar productos por categoría">
+
+                    <button class="filter-button active"
+                            type="button"
+                            data-category="todos"
+                            aria-pressed="true">
+                        Todos
+                    </button>
+
+                    <button class="filter-button"
+                            type="button"
+                            data-category="ceras"
+                            aria-pressed="false">
+                        Ceras
+                    </button>
+
+                    <button class="filter-button"
+                            type="button"
+                            data-category="geles"
+                            aria-pressed="false">
+                        Geles
+                    </button>
+
+                    <button class="filter-button"
+                            type="button"
+                            data-category="cabello"
+                            aria-pressed="false">
+                        Cabello
+                    </button>
+
+                    <button class="filter-button"
+                            type="button"
+                            data-category="fragancias"
+                            aria-pressed="false">
+                        Fragancias
+                    </button>
+
+                    <button class="filter-button"
+                            type="button"
+                            data-category="accesorios"
+                            aria-pressed="false">
+                        Accesorios
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="catalog-status">
+                <p id="product-count" aria-live="polite">
+                    Cargando productos...
+                </p>
+            </div>
+
+            <div class="product-grid" id="product-grid">
+                <!-- JavaScript genera las tarjetas -->
+            </div>
+
+            <p class="empty-state" id="empty-state" hidden>
+                No encontramos productos con esos criterios.
+                Prueba otra búsqueda o categoría.
+            </p>
+
+        </section>
+
+        <!-- Contacto -->
+        <section class="contact-banner container">
+            <div class="contact-icon">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            </div>
+
+            <div class="contact-info">
+                <h2>¿Te interesa algún producto?</h2>
+                <p>
+                    Escríbenos por WhatsApp y te ayudaremos con tu compra.
+                </p>
+            </div>
+
+            <a class="button-whatsapp"
+               href="https://wa.me/573234838051"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                Escribir por WhatsApp
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content container">
+
+            <div class="footer-brand">
+                <a href="../../index.html" class="footer-logo">
+                    Melito Style
+                </a>
+
+                <p>
+                    Transformamos tu estilo con pasión,
+                    cuidado y profesionalismo.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces rápidos</h3>
+                <a href="../../index.html">Inicio</a>
+                <a href="./productos.html">Productos</a>
+                <a href="../sobre-nosotros.html">Sobre nosotros</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Santa Fé, Buesaco, Nariño</p>
+                <a href="https://wa.me/573234838051"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    323 483 8051
+                </a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+
+                <div class="footer-socials">
+                    <a href="https://www.tiktok.com/@andress_styles"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/andress.styles"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/share/1DcdR9QBFD/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Melito Style. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
