@@ -1,254 +1,212 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Conoce al equipo de Melito Style, profesionales dedicados a ofrecer estilo, calidad y una experiencia única.">
-
+    <meta name="theme-color" content="#101010">
+    <meta name="description" content="Conoce al equipo de Melito Style, profesionales dedicados a ofrecer estilo, calidad y una experiencia única.">
     <title>Sobre nosotros | Melito Style</title>
-
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/styles_sobre_nosotros.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="../js/sobre-nosotros.js" defer></script>
+    <script src="../js/services-notice.js" defer></script>
+
 </head>
+<body class="about-page">
+    <header class="site-header">
+        <nav class="nav container" aria-label="Navegación principal">
+            <a class="brand" href="../index.html" aria-label="Melito Style, inicio">
+                <img src="../img/icono/logotipo_dorado.png" alt="" class="brand-logo">
+                <span>Melito <strong>Style</strong></span>
+            </a>
 
-<body>
+            <button class="hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
 
-    <header>
-        <nav class="nav">
-
-            <div class="nav-links">
-                <a class="button-normal" href="../index.html">Inicio</a>
-                <a class="button-normal" href="#" >Servicios</a><!-- Este botón estará disponible cuando la empresa se expanda /pages/servicios.html -->
-                <a class="button-normal" href="">Productos</a>
-                <a class="button-normal button-default" href="sobre-nosotros.html">Sobre nosotros</a>
-                <a class="button-cita button-normal" href="">Agenda cita</a>
+            <div class="nav-links" id="nav-links">
+                <a class="nav-link" href="../index.html">Inicio</a>
+                <button class="nav-link nav-link--button" type="button" data-services-notice aria-haspopup="dialog">Servicios</button>
+                <a class="nav-link" href="productos/productos.html">Productos</a>
+                <a class="nav-link active" href="sobre-nosotros.html" aria-current="page">Sobre nosotros</a>
+                <a class="button button-gold button-cita" href="https://wa.me/573234838051">Agendar cita <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
             </div>
-
         </nav>
     </header>
 
+    <main>
+        <section class="about-hero section-wrap" id="inicio">
+            <div class="about-hero__copy reveal">
+                <p class="eyebrow"><span></span> CONOCE NUESTRO EQUIPO</p>
+                <h1>Sobre <span>nosotros.</span></h1>
+                <p class="about-hero__lead">En <strong>Melito Style</strong> creemos que una buena imagen comienza con una experiencia excepcional. Nuestro equipo combina creatividad, técnica y pasión para ofrecer un servicio pensado para cada cliente.</p>
+                <div class="about-hero__actions">
+                    <a class="button button-gold" href="#equipo">Conoce al equipo <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                    <a class="button button-outline" href="#nuestra-filosofia">Nuestra filosofía</a>
+                </div>
+                <div class="about-hero__note"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Santa Fé, Buesaco · Nariño</div>
+            </div>
 
-    <section class="about-hero">
-        <div class="about-hero__content">
-            <span class="subtitle">CONOCE NUESTRO EQUIPO</span>
-            <h1>Sobre nosotros</h1>
-            <p>
-                En <strong>Melito Style</strong> creemos que una buena imagen comienza
-                con una experiencia excepcional. Nuestro equipo combina creatividad,
-                técnica y pasión para ofrecer un servicio pensado para cada cliente.
-            </p>
+            <div class="about-hero__art reveal" aria-label="Identidad de Melito Style">
+                <div class="art-ring art-ring--outer"></div>
+                <div class="art-ring art-ring--inner"></div>
+                <span class="art-word art-word--top">TU ESTILO</span>
+                <div class="about-hero__logo-wrap">
+                    <img src="../img/icono/logotipo_dorado.png" alt="Logotipo de Melito Style" class="about-hero__logo">
+                </div>
+                <span class="art-word art-word--bottom">TU ESENCIA</span>
+                <span class="art-spark art-spark--one" aria-hidden="true">✦</span>
+                <span class="art-spark art-spark--two" aria-hidden="true">✧</span>
+            </div>
+        </section>
+
+        <section class="team-section" id="equipo">
+            <div class="section-wrap">
+                <div class="section-heading team-heading reveal">
+                    <p class="eyebrow">LAS PERSONAS DETRÁS DEL ESTILO</p>
+                    <h2>Personas detrás <span>del estilo.</span></h2>
+                    <p>Conoce a los profesionales que hacen posible la experiencia Melito Style.</p>
+                </div>
+
+                <div class="team-grid">
+                    <article class="team-card">
+                        <div class="team-card__portrait team-card__portrait--one">
+                            <img src="../img/perfiles/andresfelipe.jpg" alt="Andrés Felipe, fundador de Melito Style" loading="lazy">
+                            <span class="team-card__portrait-icon" aria-hidden="true"><i class="fa-solid fa-scissors"></i></span>
+                            <span class="team-card__portrait-index" aria-hidden="true">01</span>
+                        </div>
+                        <div class="team-card__content">
+                            <p class="team-card__role">FUNDADOR Y BARBERO PRINCIPAL</p>
+                            <h3>Andres Felipe</h3>
+                            <p>Fundador de Melito Style y especialista en cortes clásicos, degradados y diseños personalizados. Su objetivo es combinar las tendencias actuales con el estilo único de cada cliente.</p>
+                        </div>
+                    </article>
+
+                    <article class="team-card">
+                        <div class="team-card__portrait team-card__portrait--two">
+                            <img src="../img/equipo-andres.jpg" alt="Integrante del equipo de administración empresarial" loading="lazy">
+                            <span class="team-card__portrait-icon" aria-hidden="true"><i class="fa-solid fa-user-tie"></i></span>
+                            <span class="team-card__portrait-index" aria-hidden="true">02</span>
+                        </div>
+                        <div class="team-card__content">
+                            <p class="team-card__role">ADMINISTRACIÓN EMPRESARIAL</p>
+                            <h3>La novia de Felipe</h3>
+                            <p>Se encarga de recibir a nuestros clientes y coordinar sus citas, procurando que cada visita a Melito Style sea cómoda, organizada y agradable desde el primer momento.</p>
+                        </div>
+                    </article>
+
+                    <article class="team-card">
+                        <div class="team-card__portrait team-card__portrait--three">
+                            <img src="../img/equipo-camila.jpg" alt="Integrante del equipo de barbería" loading="lazy">
+                            <span class="team-card__portrait-icon" aria-hidden="true"><i class="fa-solid fa-scissors"></i></span>
+                            <span class="team-card__portrait-index" aria-hidden="true">03</span>
+                        </div>
+                        <div class="team-card__content">
+                            <p class="team-card__role">OTRO PELUQUERO</p>
+                            <h3>Nombre tal</h3>
+                            <p>Es bueno peluqueando varias cositas y tal... Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus consequatur ab temporibus eligendi debitis animi delectus, dolores repellat perferendis necessitatibus maiores dolore odio doloremque nesciunt asperiores vitae saepe nisi.</p>
+                        </div>
+                    </article>
+
+                    <article class="team-card">
+                        <div class="team-card__portrait team-card__portrait--four">
+                            <img src="../img/equipo-daniel.jpg" alt="Integrante del equipo de barbería" loading="lazy">
+                            <span class="team-card__portrait-icon" aria-hidden="true"><i class="fa-solid fa-user"></i></span>
+                            <span class="team-card__portrait-index" aria-hidden="true">04</span>
+                        </div>
+                        <div class="team-card__content">
+                            <p class="team-card__role">CARGO POR DEFINIR</p>
+                            <h3>Persona tal</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas perferendis sit tempore ipsum enim! Tempore minima fugiat ad neque blanditiis maiores iure libero quis praesentium non fugit qui, corporis incidunt.</p>
+                        </div>
+                    </article>
+
+                    <article class="team-card">
+                        <div class="team-card__portrait team-card__portrait--three">
+                            <img src="../img/equipo-valentina.jpg" alt="Integrante del equipo de Melito Style" loading="lazy">
+                            <span class="team-card__portrait-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></span>
+                            <span class="team-card__portrait-index" aria-hidden="true">05</span>
+                        </div>
+                        <div class="team-card__content">
+                            <p class="team-card__role">CARGO POR DEFINIR</p>
+                            <h3>Persona tal</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur non quo eos debitis, vel iure repudiandae labore soluta amet ipsa. Sunt numquam quae odit aspernatur vitae incidunt est cum eveniet.</p>
+                        </div>
+                    </article>
+
+                    <article class="team-card">
+                        <div class="team-card__portrait team-card__portrait--two">
+                            <img src="../img/equipo-sebastian.jpg" alt="Integrante del equipo de barbería" loading="lazy">
+                            <span class="team-card__portrait-icon" aria-hidden="true"><i class="fa-solid fa-user"></i></span>
+                            <span class="team-card__portrait-index" aria-hidden="true">06</span>
+                        </div>
+                        <div class="team-card__content">
+                            <p class="team-card__role">CARGO POR DEFINIR</p>
+                            <h3>Persona tal</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, tenetur itaque eum quisquam similique quo quas! Nesciunt ducimus, optio eum quasi nam sapiente corporis. Ipsum sint et ea sit earum.</p>
+                        </div>
+                    </article>
+                </div>
+                <p class="team-note"><i class="fa-regular fa-lightbulb" aria-hidden="true"></i> Recuerda actualizar los nombres, cargos y textos que aún son provisionales.</p>
+            </div>
+        </section>
+
+        <section class="about-cta">
+            <div class="about-cta__decoration" aria-hidden="true"></div>
+            <div class="section-wrap about-cta__content reveal">
+                <p class="eyebrow">TU SIGUIENTE CAPÍTULO EMPIEZA AQUÍ</p>
+                <h2>¿Listo para <span>renovar tu estilo?</span></h2>
+                <p>Nuestro equipo está preparado para crear una experiencia pensada para ti.</p>
+                <a class="button button-gold" href="https://wa.me/573234838051">Agendar cita <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content section-wrap">
+            <div class="footer-section footer-brand-section">
+                <a class="brand footer-brand" href="../index.html">
+                    <img src="../img/icono/logotipo_dorado.png" alt="" class="brand-logo" loading="lazy">
+                    <span>Melito <strong>Style</strong></span>
+                </a>
+                <p>Transformamos tu estilo con pasión, técnica y personalidad.</p>
+                <div class="social-icons" aria-label="Redes sociales">
+                    <a href="https://www.tiktok.com/@andress_styles?_r=1&_t=ZS-9Ae1OStenGy" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/share/1DcdR9QBFD/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/andress.styles?mdxt=YzR6cXBuM3Y2ZXEx" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Explora</h3>
+                <a href="../index.html">Inicio</a>
+                <button class="footer-link--button" type="button" data-services-notice aria-haspopup="dialog">Servicios</button>
+                <a href="productos/productos.html">Productos</a>
+                <a href="sobre-nosotros.html" aria-current="page">Sobre nosotros</a>
+            </div>
+            <div class="footer-section">
+                <h3>Encuéntranos</h3>
+                <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Santa Fé, Buesaco, Nariño</p>
+                <a href="tel:+573234838051"><i class="fa-solid fa-phone" aria-hidden="true"></i> 323 483 8051</a>
+                <p><i class="fa-regular fa-clock" aria-hidden="true"></i> Atención con cita previa</p>
+            </div>
         </div>
-    </section>
-
-
-    <!-- EQUIPO -->
-
-    <section class="team-section">
-
-        <div class="section-title">
-            <span class="subtitle">NUESTRO EQUIPO</span>
-
-            <h2>Personas detrás del estilo</h2>
-            <p>
-                Conoce a los profesionales que hacen posible la experiencia
-                Melito Style.
-            </p>
+        <div class="footer-bottom section-wrap">
+            <p>© <span id="year">2026</span> Melito Style. Todos los derechos reservados.</p>
+            <a href="#inicio">Volver arriba <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
         </div>
-        <div class="team-container">
-
-            <!-- PARTICIPANTE 1 -->
-
-            <article class="team-card">
-
-                <div class="team-image">
-                    <img src="../img/perfiles/andresfelipe.jpg"
-                        alt="Andres Felipe, fundador de Melito Style">
-                </div>
-
-                <div class="team-info">
-
-                    <span class="team-role">FUNDADOR Y BARBERO PRINCIPAL</span>
-
-                    <h3>Andres Felipe</h3>
-
-                    <p>
-                        Fundador de Melito Style y especialista en cortes clásicos,
-                        degradados y diseños personalizados. Su objetivo es combinar
-                        las tendencias actuales con el estilo único de cada cliente.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- PARTICIPANTE 2 -->
-
-            <article class="team-card">
-
-                <div class="team-image">
-                    <img src="../img/equipo-andres.jpg"
-                        alt="Andrés Martínez, barbero">
-                </div>
-
-                <div class="team-info">
-
-                    <span class="team-role">ADMINISTRACION EMPRESARIAL</span>
-
-                    <h3>La novia de Felipe</h3>
-
-                    <p>
-                        Se encarga de recibir a nuestros clientes y coordinar sus
-                        citas, procurando que cada visita a Melito Style sea cómoda,
-                        organizada y agradable desde el primer momento.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- PARTICIPANTE 3 -->
-
-            <article class="team-card">
-
-                <div class="team-image">
-                    <img src="../img/equipo-camila.jpg"
-                        alt="Camila Torres, estilista">
-                </div>
-
-                <div class="team-info">
-
-                    <span class="team-role">Otro peluquero</span>
-
-                    <h3>Nombre tal</h3>
-
-                    <p>
-                        Es bueno peluqueando varias cositas y tal... Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus consequatur ab temporibus eligendi debitis animi delectus, dolores repellat perferendis necessitatibus maiores dolore odio doloremque nesciunt asperiores vitae saepe nisi.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- PARTICIPANTE 4 -->
-
-            <article class="team-card">
-
-                <div class="team-image">
-                    <img src="../img/equipo-daniel.jpg"
-                        alt="Daniel Gómez, barbero">
-                </div>
-
-                <div class="team-info">
-
-                    <span class="team-role">Cargo tal</span>
-
-                    <h3>Persona tal</h3>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas perferendis sit tempore ipsum enim! Tempore minima fugiat ad neque blanditiis maiores iure libero quis praesentium non fugit qui, corporis incidunt.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- PARTICIPANTE 5 -->
-
-            <article class="team-card">
-
-                <div class="team-image">
-                    <img src="../img/equipo-valentina.jpg"
-                        alt="Valentina López, atención al cliente">
-                </div>
-
-                <div class="team-info">
-
-                    <span class="team-role">cargo tal</span>
-
-                    <h3>persona tal</h3>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur non quo eos debitis, vel iure repudiandae labore soluta amet ipsa. Sunt numquam quae odit aspernatur vitae incidunt est cum eveniet.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- PARTICIPANTE 6 -->
-
-            <article class="team-card">
-
-                <div class="team-image">
-                    <img src="../img/equipo-sebastian.jpg"
-                        alt="Sebastián Herrera, barbero">
-                </div>
-
-                <div class="team-info">
-
-                    <span class="team-role">Cargo</span>
-
-                    <h3>persona tal</h3>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, tenetur itaque eum quisquam similique quo quas! Nesciunt ducimus, optio eum quasi nam sapiente corporis. Ipsum sint et ea sit earum.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- ESTRELLAS -->
-
-    <section class="about-values">
-
-        <div class="section-title">
-
-            <span class="subtitle">Danos 5 Estrellas</span>
-
-            <h2>★★★★★</h2>
-
-            <p>
-                Siempre buscamos ofrecerte el mejor servicio, nuestros barberos son profesionales en el asunto.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- CTA -->
-
-    <section class="about-cta">
-
-        <h2>¿Listo para renovar tu estilo?</h2>
-
-        <p>
-            Nuestro equipo está preparado para crear una experiencia pensada para ti.
-        </p>
-
-        <a href="" class="cta-button">Agendar cita</a>
-
-    </section>
-
-
-    <script src="../js/button-burger.js"></script>
+    </footer>
+
+    <!-- Aviso temporal -->
+    <dialog class="services-notice" id="servicesNotice" aria-labelledby="servicesNoticeTitle" aria-describedby="servicesNoticeDescription">
+        <button class="services-notice__close" type="button" data-close-services-notice aria-label="Cerrar aviso">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <p class="services-notice__eyebrow">MELITO STYLE</p>
+        <h2 class="services-notice__title" id="servicesNoticeTitle">Muy pronto</h2>
+        <p class="services-notice__description" id="servicesNoticeDescription">Estamos preparando este apartado para ti. La sección de servicios estará disponible próximamente.</p>
+        <a class="button button-outline services-notice__back" href="../index.html">Volver al inicio</a>
+    </dialog>
 
 </body>
 </html>
-```

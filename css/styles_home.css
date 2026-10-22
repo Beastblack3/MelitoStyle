@@ -84,7 +84,7 @@ p { color: var(--muted); }
 /* Filosofía */
 .section-second { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); align-items: center; gap: clamp(40px, 7vw, 90px); padding-block: 82px 100px; }
 .media-panel { position: relative; min-height: 350px; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); background: radial-gradient(circle at 50% 45%, #302817 0%, #1e1b15 35%, #171717 78%); box-shadow: var(--shadow); }
-.box__section-second { width: 100%; height: 400px; object-fit:cover; opacity: .9; }
+.box__section-second { width: 100%; height: 400px; object-fit: cover; opacity: .9; }
 .media-caption { position: absolute; right: 20px; bottom: 18px; left: 20px; display: flex; align-items: center; gap: 10px; color: var(--gold-light); font-size: .64rem; font-weight: 800; letter-spacing: .13em; }
 .caption-line { width: 28px; height: 1px; background: var(--gold); }
 .section-copy { max-width: 570px; }
@@ -207,6 +207,7 @@ p { color: var(--muted); }
     .nav-links.is-open { max-height: min(80vh, 520px); padding: 15px 22px 23px; overflow-y: auto; visibility: visible; border-color: var(--border); opacity: 1; }
     .nav-link { padding: 12px 5px; font-size: .84rem; }
     .nav-link::after { display: none; }
+    .nav-link--button {text-align:left;}
     .button-cita { align-self: flex-start; margin-top: 8px; padding-inline: 18px; font-size: .78rem; }
     .hero { grid-template-columns: minmax(0, 1fr) minmax(220px, .7fr); gap: 24px; min-height: 500px; padding-block: 66px 74px; }
     .hero h1 { font-size: clamp(3rem, 7.8vw, 4.5rem); }
@@ -273,4 +274,227 @@ p { color: var(--muted); }
 
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+
+/* Aviso temporal de Servicios — estilos compartidos con Sobre nosotros */
+.nav-link--button {
+    border: 0;
+    background: transparent;
+    font-family: inherit;
+    cursor: pointer;
+}
+.nav-link--button:focus-visible,
+.footer-link--button:focus-visible,
+.services-notice__close:focus-visible {
+    outline: 2px solid var(--gold-light);
+    outline-offset: 4px;
+}
+.footer-link--button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #999286;
+    font-family: inherit;
+    font-size: .79rem;
+    text-align: left;
+    cursor: pointer;
+    transition: color 220ms ease;
+}
+.footer-link--button:hover { color: var(--gold-light); }
+.services-notice {
+    position: fixed;
+    width: min(720px, calc(100% - 30px));
+    max-width: 720px;
+    max-height: min(90vh, 900px);
+    padding: clamp(24px, 4vw, 42px);
+    overflow: auto;
+    border: 1px solid rgba(211,170,76,.42);
+    border-radius: 24px;
+    background: radial-gradient(ellipse at 50% 0%, rgba(211,170,76,.12), transparent 53%), #141414;
+    color: var(--text);
+    text-align: center;
+    box-shadow: 0 28px 100px rgba(0,0,0,.7);
+}
+.services-notice[open] { animation: services-notice-in 240ms var(--ease) both; }
+.services-notice::backdrop { background: rgba(0,0,0,.78); backdrop-filter: blur(7px); -webkit-backdrop-filter: blur(7px); }
+.services-notice__close {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    display: grid;
+    width: 40px;
+    height: 40px;
+    margin: -12px -12px 8px auto;
+    place-items: center;
+    border: 1px solid rgba(211,170,76,.28);
+    border-radius: 50%;
+    background: #1d1b17;
+    color: var(--gold-light);
+    cursor: pointer;
+}
+.services-notice__eyebrow { margin-bottom: 7px; color: var(--gold); font-size: .68rem; font-weight: 800; letter-spacing: .2em; }
+.services-notice__title { margin-bottom: 20px; font-size: clamp(1.9rem, 5vw, 2.8rem); }
+.services-notice__image {
+    width: 100%;
+    max-height: 56vh;
+    margin-inline: auto;
+    border: 1px solid rgba(211,170,76,.15);
+    border-radius: 13px;
+    object-fit: contain;
+    background: #101010;
+}
+.services-notice__description { max-width: 510px; margin: 19px auto 22px; font-size: .86rem; line-height: 1.8; }
+.services-notice__back { min-height: 43px; }
+@keyframes services-notice-in { from { opacity: 0; transform: translateY(10px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@media (max-width: 650px) {
+    .services-notice { padding: 22px 17px 24px; border-radius: 18px; }
+    .services-notice__image { max-height: 47vh; }
+}
+@media (prefers-reduced-motion: reduce) { .services-notice[open] { animation: none; } }
+
+
+
+/* =========================================
+   LOGO ANIMADO — MELITO STYLE
+   Versión sin anillos ni marcos duplicados
+   ========================================= */
+
+.hero-logo-orbit {
+    position: absolute;
+    z-index: 0;
+    border: 1px solid rgba(211, 170, 76, 0.27);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero-logo-orbit--outer {
+    width: 93%;
+    height: 60%;
+    rotate: -32deg;
+    animation: hero-orbit 14s linear infinite;
+}
+
+.hero-logo-orbit--inner {
+    width: 73%;
+    height: 95%;
+    rotate: 32deg;
+    border-color: rgba(211, 170, 76, 0.20);
+    animation: hero-orbit 17s linear infinite reverse;
+}
+
+/* Único marco circular del logo */
+.hero-logo-medallion {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    width: 53%;
+    aspect-ratio: 1;
+    place-items: center;
+    border: 1px solid rgba(211, 170, 76, 0.25);
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 50% 35%,
+        #2a2519,
+        #161513 68%
+    );
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.4),
+        inset 0 0 35px rgba(211, 170, 76, 0.045);
+}
+
+.hero-logo-image {
+    display: block;
+    width: 69%;
+    height: 69%;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 22px rgba(211, 170, 76, 0.2));
+    animation: hero-logo-breathe 5s ease-in-out infinite;
+}
+
+.hero-logo-word {
+    position: absolute;
+    z-index: 2;
+    color: var(--gold-light);
+    font-size: 0.61rem;
+    font-weight: 800;
+    letter-spacing: 0.25em;
+    pointer-events: none;
+}
+
+.hero-logo-word--top {
+    top: 7%;
+}
+
+.hero-logo-word--bottom {
+    bottom: 7%;
+}
+
+.hero-logo-spark {
+    position: absolute;
+    z-index: 2;
+    color: var(--gold);
+    text-shadow: 0 0 20px rgba(211, 170, 76, 0.4);
+    pointer-events: none;
+}
+
+.hero-logo-spark--one {
+    top: 23%;
+    right: 12%;
+    font-size: 1.7rem;
+    animation: hero-sparkle 3.8s ease-in-out infinite;
+}
+
+.hero-logo-spark--two {
+    bottom: 22%;
+    left: 9%;
+    font-size: 1.25rem;
+    animation: hero-sparkle 4.5s ease-in-out infinite reverse;
+}
+
+/* Movimientos */
+@keyframes hero-orbit {
+    from { rotate: 0deg; }
+    to { rotate: 360deg; }
+}
+
+@keyframes hero-logo-breathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.035); }
+}
+
+@keyframes hero-sparkle {
+    0%, 100% {
+        opacity: 0.55;
+        transform: scale(0.85) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.12) rotate(12deg);
+    }
+}
+
+/* Adaptación a móviles */
+@media (max-width: 640px) {
+    .hero-logo-medallion {
+        width: 53%;
+    }
+
+    .hero-logo-word {
+        font-size: 0.52rem;
+    }
+
+    .hero-logo-spark--one {
+        font-size: 1.4rem;
+    }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .hero-logo-orbit,
+    .hero-logo-image,
+    .hero-logo-spark {
+        animation: none !important;
+    }
 }

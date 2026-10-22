@@ -7,10 +7,12 @@
     <meta name="description" content="Melito Style: barbería, cuidado personal y estilo a tu medida en Santa Fé, Buesaco, Nariño.">
     <title>Melito Style | Tu estilo, tu esencia</title>
 
+    <!-- Conserva las fuentes que ya tienes en el proyecto. -->
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/styles_home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="js/home.js" defer></script>
+    <script src="js/services-notice.js" defer></script>
 </head>
 <body>
     <header class="site-header">
@@ -26,10 +28,10 @@
 
             <div class="nav-links" id="nav-links">
                 <a class="nav-link active" href="index.html" aria-current="page">Inicio</a>
-                <a class="nav-link" href="pages/servicios.html">Servicios</a>
+                <button class="nav-link nav-link--button" type="button" data-services-notice aria-haspopup="dialog">Servicios</button>
                 <a class="nav-link" href="pages/productos/productos.html">Productos</a>
                 <a class="nav-link" href="pages/sobre-nosotros.html">Sobre nosotros</a>
-                <a class="button button-gold button-cita" href="#contacto">Agendar cita <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a class="button button-gold button-cita" href="https://wa.me/573234838051">Agendar cita <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
             </div>
         </nav>
     </header>
@@ -47,12 +49,29 @@
                 </div>
                 <div class="hero-note"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Santa Fé, Buesaco · Nariño</div>
             </div>
-            <div class="hero-visual reveal" aria-label="Logotipo de Melito Style">
-                <div class="hero-orbit hero-orbit--one"></div>
-                <div class="hero-orbit hero-orbit--two"></div>
-                <div class="hero-logo-frame">
-                    <img class="imagen-marca" src="img/icono/logotipo_dorado.png" alt="Logotipo dorado de Melito Style">
+
+                <div class="hero-visual reveal" aria-label="Logotipo animado de Melito Style">
+                
+                    <div class="hero-logo-orbit hero-logo-orbit--outer"></div>
+                    <div class="hero-logo-orbit hero-logo-orbit--inner"></div>
+                
+                    <span class="hero-logo-word hero-logo-word--top">TU ESTILO</span>
+                
+                    <div class="hero-logo-medallion">
+                        <img
+                            class="hero-logo-image"
+                            src="img/icono/logotipo_dorado.png"
+                            alt="Logotipo de Melito Style">
+                    </div>
+                
+                    <span class="hero-logo-word hero-logo-word--bottom">TU ESENCIA</span>
+                
+                    <span class="hero-logo-spark hero-logo-spark--one" aria-hidden="true">✦</span>
+                    <span class="hero-logo-spark hero-logo-spark--two" aria-hidden="true">✧</span>
+                
+                
                 </div>
+
                 <span class="hero-stamp"><i class="fa-solid fa-scissors" aria-hidden="true"></i> ESTILO CON CARÁCTER</span>
             </div>
         </section>
@@ -72,7 +91,7 @@
         </section>
 
         <section class="commitment section-wrap" id="compromiso">
-            <div class="commitment-gallery reveal" id="galeria" aria-label="Galería de cortes y trabajos">
+            <div class="commitment-gallery reveal" aria-label="Trabajos destacados de Melito Style">
                 <figure class="gallery-image gallery-image--large">
                     <img src="img/cortes/Screenshot_20261011-150437.jpg" alt="Corte de cabello profesional" loading="lazy">
                     <figcaption>Precisión en cada corte</figcaption>
@@ -178,7 +197,7 @@
                 <p class="eyebrow">TU PRÓXIMO LOOK EMPIEZA AQUÍ</p>
                 <h2>¿Listo para transformar <span>tu estilo?</span></h2>
                 <p>Ven a Melito Style y encuentra un look que refleje quién eres. Estamos listos para atenderte.</p>
-                <a class="button button-gold" href="tel:+573234838051">Agenda tu cita <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a class="button button-gold" href="https://wa.me/573234838051">Agenda tu cita <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
         </section>
     </main>
@@ -200,7 +219,7 @@
             <div class="footer-section">
                 <h3>Explora</h3>
                 <a href="#inicio">Inicio</a>
-                <a href="pages/servicios.html">Servicios</a>
+                <button class="footer-link--button" type="button" data-services-notice aria-haspopup="dialog">Servicios</button>
                 <a href="pages/productos/productos.html">Productos</a>
                 <a href="pages/sobre-nosotros.html">Sobre nosotros</a>
             </div>
@@ -216,5 +235,17 @@
             <a href="#inicio">Volver arriba <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
         </div>
     </footer>
+
+    <!-- Aviso temporal -->
+    <dialog class="services-notice" id="servicesNotice" aria-labelledby="servicesNoticeTitle" aria-describedby="servicesNoticeDescription">
+        <button class="services-notice__close" type="button" data-close-services-notice aria-label="Cerrar aviso">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <p class="services-notice__eyebrow">MELITO STYLE</p>
+        <h2 class="services-notice__title" id="servicesNoticeTitle">Muy pronto</h2>
+        <p class="services-notice__description" id="servicesNoticeDescription">Estamos preparando este apartado para ti. La sección de servicios estará disponible próximamente.</p>
+        <a class="button button-outline services-notice__back" href="../index.html">Volver al inicio</a>
+    </dialog>
+
 </body>
 </html>

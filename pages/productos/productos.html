@@ -17,6 +17,7 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script src="../../js/catalogo.js" defer></script>
+    <script src="../../js/services-notice.js" defer></script>
 </head>
 
 <body>
@@ -41,9 +42,7 @@
 
                 <a class="nav-link" href="../../index.html">Inicio</a>
 
-                <a class="nav-link" href="../../index.html#servicios">
-                    Servicios
-                </a>
+                <button class="nav-link nav-link--button" type="button" data-services-notice aria-haspopup="dialog">Servicios</button>
 
                 <a class="nav-link active"
                    href="./productos.html"
@@ -55,10 +54,6 @@
                     Sobre nosotros
                 </a>
 
-                <a class="nav-link admin-link" href="../../admin.html">
-                    <i class="fa-solid fa-lock" aria-hidden="true"></i>
-                    Panel admin
-                </a>
 
                 <a class="nav-appointment"
                    href="https://wa.me/573234838051"
@@ -287,6 +282,15 @@
             <p>&copy; 2026 Melito Style. Todos los derechos reservados.</p>
         </div>
     </footer>
-
+    <!-- Aviso temporal -->
+    <dialog class="services-notice" id="servicesNotice" aria-labelledby="servicesNoticeTitle" aria-describedby="servicesNoticeDescription">
+        <button class="services-notice__close" type="button" data-close-services-notice aria-label="Cerrar aviso">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <p class="services-notice__eyebrow">MELITO STYLE</p>
+        <h2 class="services-notice__title" id="servicesNoticeTitle">Servicios próximamente</h2>
+        <p class="services-notice__description" id="servicesNoticeDescription">Estamos preparando este apartado para ti. La sección de servicios estará disponible próximamente.</p>
+        <a class="button button-outline services-notice__back" href="../../index.html">Volver al inicio</a>
+    </dialog>
 </body>
 </html>
